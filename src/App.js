@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { ICONS, COLORS } from './configs';
 import CreateOne from './components/CreateOne';
 
 // import logo from './logo.svg';
 // import './App.css';
 
 
-const CONFIG = {
-	UNICORN : '🦄'
-};
 
 class App extends Component {
   render() {
@@ -30,9 +28,10 @@ class App extends Component {
 			      <Route path="/achievement/:icon/:color/:text" render={({ match }) => {
 			      	const { icon, color, text } = match.params;
 			      	return (
-			      		<div style={ {backgroundColor : decodeURIComponent(color)}}>
-						      <div>{ CONFIG[icon] }</div>
-			      		  <p>here is where we will display achievement { CONFIG[icon] }{ decodeURIComponent(icon) } - { decodeURIComponent(color) } - { decodeURIComponent(text) }
+			      		<div style={ {backgroundColor : decodeURIComponent(color)} }>
+						      hmm- { COLORS[decodeURIComponent(color)] } { decodeURIComponent(color) }
+						      <div>{ ICONS[decodeURIComponent(icon)] }</div>
+			      		  <p>here is where we will display achievement { decodeURIComponent(text) }
 					        </p>
 					      </div>
 

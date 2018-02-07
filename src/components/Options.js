@@ -4,7 +4,7 @@ import { string, shape, arrayOf, func } from 'prop-types';
 class Options extends Component {
 
 	static propTypes = {
-		fieldClass : string,
+		classMod : string,
 		title : string,
 		name : string.isRequired,
 		radioOptions : arrayOf(shape({
@@ -16,20 +16,25 @@ class Options extends Component {
 
 	render() {
 		const {
-			fieldClass,
+			classMod,
 			title,
 			radioOptions,
 			name,
 			onUpdate,
 		} = this.props;
 		return (
-			<fieldset className={ fieldClass }>
-				{ title ? <legend>{ title }</legend> : null }
+			<fieldset className={ `o-field-options  o-field-options--${classMod}` }>
+				{ title ? <legend className="o-field-options__legend">{ title }</legend> : null }
 				{
 					radioOptions.map((opt) => {
 						return (
-							<label key={ `${opt.value}_${name}` }>
+							<label
+								data-value={ opt.value }
+								className="o-field-options__label"
+								key={ `${opt.value}_${name}` }
+							>
 								<input
+									className="o-field-options__input"
 									onClick={ ({target}) => {
 										onUpdate(target.value)
 									} }

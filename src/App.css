@@ -1,28 +1,97 @@
-.App {
-  text-align: center;
+.c-badge {
+	font-size: 2rem;
+	text-align: center;
+	font-family: 'Share Tech Mono', monospace;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.c-badge__title {
+	font-size: 1.5em;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.c-badge__content {
+	margin: 0 auto;
+	background-color: #48e0a4;
+	padding: .5em .75em;
+	box-shadow: 0 0 15px 3px rgba(255, 20, 147, .5);
+	border: 2px solid deeppink;
+	border-radius: 10px;
+	display: inline-block;
 }
 
-.App-title {
-  font-size: 1.5em;
+.c-badge__icon {
+	display: inline-block;
+	font-size: 2em;
+	vertical-align: middle;
 }
 
-.App-intro {
-  font-size: large;
+.c-badge__icon:first-child {
+	transform: scale(-1, 1);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.c-badge__text {
+	display: inline-block;
+	padding: .5em;
+	max-width: 75%;
+	vertical-align: middle;
+}
+
+
+.o-field-options {
+	margin: .35em;
+}
+
+.o-field-options__legend {
+	font-family: 'Rammetto One', cursive;
+	padding: .35em;
+	margin-bottom: .5em;
+	background: #FFD02B;
+	border-radius: 3px;
+	border: 1px solid #808080;
+}
+
+.o-field-options__label {
+	display: inline-block;
+}
+
+.o-field-options__input[type=radio] {
+
+}
+
+.o-field-options__label[data-value="#f26767"] {
+	background-color: #f26767;
+}
+.o-field-options__label[data-value="#FFD02B"] {
+	background-color: #FFD02B;
+}
+.o-field-options__label[data-value="#67a8da"] {
+	background-color: #67a8da;
+}
+.o-field-options__label[data-value="#48e0a4"] {
+	background-color: #48e0a4;
+}
+
+/* >=> Modifiers <=< */
+.o-field-options--icons {}
+.o-field-options--icons .o-field-options__input {
+	vertical-align: middle;
+}
+.o-field-options--icons .o-field-options__label {
+	margin-right: .35em;
+	font-size: 35px;
+}
+
+/* >=> Modifiers <=< */
+.o-field-options--colors {}
+.o-field-options--colors .o-field-options__label {
+	padding: 10px;
+	margin-right: .5em;
+}
+.o-field-options--colors .o-field-options__input {
+	margin-right: .35em;
+}
+/* >=> Modifiers <=< */
+.o-field-options--text {}
+.o-field-options--text .o-field-options__input {
+	font-size: 1.5em;
+	width: 75%;
 }

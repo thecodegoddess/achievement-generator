@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { ICONS, COLORS } from './configs';
 import CreateOne from './components/CreateOne';
+import BannerDisplay from './components/BannerDisplay';
 
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 
 
 
@@ -25,18 +25,8 @@ class App extends Component {
 				      );
 			      }} />
 			      <Route path="/new" component={ CreateOne } />
-			      <Route path="/achievement/:icon/:color/:text" render={({ match }) => {
-			      	const { icon, color, text } = match.params;
-			      	return (
-			      		<div style={ {backgroundColor : decodeURIComponent(color)} }>
-						      hmm- { COLORS[decodeURIComponent(color)] } { decodeURIComponent(color) }
-						      <div>{ ICONS[decodeURIComponent(icon)] }</div>
-			      		  <p>here is where we will display achievement { decodeURIComponent(text) }
-					        </p>
-					      </div>
+			      <Route path="/achievement/:icon/:color/:text" component={ BannerDisplay } />
 
-				      );
-			      }}/>
 		      </main>
 	      </div>
 	    </Router>

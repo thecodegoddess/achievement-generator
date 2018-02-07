@@ -8,7 +8,7 @@ class TextInput extends Component {
 	};
 
 	static propTypes = {
-		fieldClass : string,
+		classMod : string,
 		title : string,
 		name : string.isRequired,
 		onUpdate : func.isRequired,
@@ -27,15 +27,16 @@ class TextInput extends Component {
 
 	render() {
 		const {
-			fieldClass,
+			classMod,
 			title,
 			name,
 		} = this.props;
 
 		return (
-			<fieldset className={ fieldClass }>
-				{ title ? <legend>{ title }</legend> : null }
+			<fieldset className={ `o-field-options  o-field-options--${classMod}` }>
+				{ title ? <legend className="o-field-options__legend">{ title }</legend> : null }
 				<input
+					className="o-field-options__input"
 					value={ this.state.value }
 					type="text"
 					name={ name }

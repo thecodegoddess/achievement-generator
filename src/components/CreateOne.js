@@ -28,7 +28,7 @@ const CreateOne = ({ updateValue, colors, icons, url }) => {
 			<Link to={ url }>Test Banner</Link>
 			<Options
 				name="icons"
-				fieldClass="test"
+				classMod="icons"
 				title="Select an Icon"
 				radioOptions={ iconOptions }
 				onUpdate={ (val) => {
@@ -39,6 +39,7 @@ const CreateOne = ({ updateValue, colors, icons, url }) => {
 			<Options
 				title="Select a background color"
 				name="colors"
+				classMod="colors"
 				radioOptions={ colorOptions }
 				onUpdate={ (val) => {
 					console.log('value of icon is ', val);
@@ -47,7 +48,7 @@ const CreateOne = ({ updateValue, colors, icons, url }) => {
 			/>
 			<TextInput
 				title="Select the message to share"
-				fieldClass="Something"
+				classMod="text"
 				name="message"
 				onUpdate={ (val) => {
 					console.log('value of icon is ', val);

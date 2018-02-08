@@ -54,7 +54,9 @@ const CreateOne = ({ resetUrl, updateValue, colors, icons, getUrl, shortenedUrl,
 					updateValue({ key : 'message', value : val});
 				}}
 			/>
-			{ url !== null ? <button onClick={ getUrl }>Get Url</button> : null }
+			{ url !== null ? <button
+				className="o-btn"
+				onClick={ getUrl }>Get Url</button> : null }
 
 		</main>
 	)

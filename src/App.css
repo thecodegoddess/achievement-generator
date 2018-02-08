@@ -1,40 +1,29 @@
-.c-badge {
-	font-size: 2rem;
-	text-align: center;
-	font-family: 'Share Tech Mono', monospace;
+body {
+	font-family: Verdana, Helvetica, sans-serif;
 }
 
-.c-badge__title {
-	font-size: 1.5em;
+/* Objects */
+
+button.o-btn {
+	appearance: none;
+	border: none;
 }
 
-.c-badge__content {
-	margin: 0 auto;
-	background-color: #48e0a4;
-	padding: .5em .75em;
-	box-shadow: 0 0 15px 3px rgba(255, 20, 147, .5);
-	border: 2px solid deeppink;
-	border-radius: 10px;
-	display: inline-block;
+a.o-btn {
+	text-decoration: none;
 }
 
-.c-badge__icon {
-	display: inline-block;
-	font-size: 2em;
-	vertical-align: middle;
+.o-btn {
+	font-size: .95em;
+	line-height: 1.25;
+	padding: .5em 1em;
+	font-family: 'Rammetto One', cursive;
+	text-transform: capitalize;
+	background: linear-gradient(to bottom, rgba(203,96,179,1) 0%,rgba(193,70,161,1) 50%,rgba(168,0,119,1) 51%,rgba(219,54,164,1) 100%);
+	border-radius: 3px;
+	color: #ffffff;
+	text-shadow: 2px 2px 3px rgba(10, 10, 10, .5);
 }
-
-.c-badge__icon:first-child {
-	transform: scale(-1, 1);
-}
-
-.c-badge__text {
-	display: inline-block;
-	padding: .5em;
-	max-width: 75%;
-	vertical-align: middle;
-}
-
 
 .o-field-options {
 	margin: .35em;
@@ -51,6 +40,7 @@
 
 .o-field-options__label {
 	display: inline-block;
+	text-transform: capitalize;
 }
 
 .o-field-options__input[type=radio] {
@@ -85,7 +75,9 @@
 .o-field-options--colors .o-field-options__label {
 	padding: 10px;
 	margin-right: .5em;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .75);
 }
+
 .o-field-options--colors .o-field-options__input {
 	margin-right: .35em;
 }
@@ -94,4 +86,102 @@
 .o-field-options--text .o-field-options__input {
 	font-size: 1.5em;
 	width: 75%;
+}
+
+.o-text-field-single {
+	display: flex;
+	justify-content: flex-end;
+	border: 1px solid grey;
+	padding: .25em .5em;
+	border-radius: 3px;
+}
+
+.o-text-field-single__input {
+	flex: 3 0 auto;
+	appearance: none;
+	border: none;
+}
+
+.o-text-field-single__btn {
+	appearance: none;
+	font-size: 1.25em;
+	font-weight: normal;
+	line-height: 1.5;
+	border: none;
+	padding: 0;
+}
+
+.o-main-content {
+	margin: 1.25rem;
+}
+/* === === === === === === === === === === === === === === === === === === === === */
+
+.c-badge {
+	font-size: 2rem;
+	text-align: center;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+.c-badge__title {
+	font-size: 1.5em;
+}
+
+.c-badge__content {
+	margin: 0 auto;
+	background-color: #48e0a4;
+	padding: .5em .75em;
+	box-shadow: 0 0 15px 3px rgba(255, 20, 147, .5);
+	border: 2px solid deeppink;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.c-badge__icon {
+	font-size: 2em;
+}
+
+.c-badge__icon:first-child {
+	transform: scale(-1, 1);
+}
+
+.c-badge__text {
+	padding: .5em;
+}
+
+/* !== !== !== !== !== !== !== !== !== !== !== !== !== !== !== !==  */
+
+.c-site-header {
+	font-size: 1.25rem;
+	padding: .75em;
+	background: #272727;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.c-site-header__title {
+	font-family: 'Rammetto One', cursive;
+	color: white;
+	text-shadow: 2px 2px 5px deeppink;
+}
+
+.c-nav {
+	list-style: none;
+	padding: 0;
+	display: flex;
+}
+
+.c-nav__item {
+	display: inline-block;
+	margin-left: .75em;
+}
+
+.c-nav__link {
+
+}
+
+.c-footer {
+	text-align: center;
+
 }

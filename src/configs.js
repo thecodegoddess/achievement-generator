@@ -3,6 +3,13 @@ export const ICONS = {
 	ICO2 : '💩',
 	ICO3 : '☠',
 	ICO4 : '😈',
+	ICO5 : '😂',
+	ICO6 : '😉',
+	ICO7 : '🤔',
+	ICO8 : '👻',
+	ICO9 : '👽',
+	ICO10 : '🐙',
+	ICO11 : '🥑',
 };
 
 export const COLORS = {

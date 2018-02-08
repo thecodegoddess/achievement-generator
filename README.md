@@ -6,11 +6,14 @@ WIP Mock here - https://codepen.io/thecodegoddess/pen/NyrEpW?editors=1100
 - [x] Add react router
 - [x] create the forms
 - [x] use hoc for state management
+- [ ] Clean up code
 - [ ] Make mobile friendly (should have started there :/ )
 - [ ] Add JSDOCs
 - [ ] Consider adding Flow
 - [ ] Unit Tests
 - [ ] Consider redux
+- [ ] Add Edit Option
+- [x] Url shortener
 - [ ] launch 
 
 

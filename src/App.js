@@ -13,21 +13,25 @@ class App extends Component {
     return (
     	<Router basename="/achieve">
 	      <div className="App">
-	        <ul>
-		        <li><Link to="/">Home</Link></li>
-		        <li><Link to="/new">New</Link></li>
-		        <li><Link to="/achievement/UNICORN/%2367a8da/Sprint%20Planning%20with%20out%20using%20points%20cards%20!!!"> test banner</Link></li>
-	        </ul>
-		      <main>
+		      <nav className="c-site-header">
+			      <h1 className="c-site-header__title">Achievement Generator</h1>
+			      <ul className="c-nav">
+				      <li className="c-nav__item"><Link className="o-btn c-nav__link" to="/">Home</Link></li>
+				      <li className="c-nav__item"><Link className="o-btn c-nav__link" to="/new">New</Link></li>
+			      </ul>
+		      </nav>
+
+		      <main className="o-main-content">
 			      <Route path="/" exact render={()=> {
 			      	return (
-			      		<h1>home is here</h1>
+					      <p>Created this Achievement Generator for fun. Just wanted to play with a few techs for fun. Create <Link to="/new">one</Link> and share it</p>
 				      );
 			      }} />
 			      <Route path="/new" component={ CreateOne } />
 			      <Route path="/achievement/:icon/:color/:text" component={ BannerDisplay } />
 
 		      </main>
+		      <footer className="c-footer">&copy; { (new Date()).getFullYear() } thecodegoddess</footer>
 	      </div>
 	    </Router>
     );

@@ -15,8 +15,6 @@ class TextInput extends Component {
 	};
 
 	onChange = ({ target }) => {
-		// debugger;
-		// return
 		this.setState({
 			value : target.value
 		});
@@ -41,14 +39,20 @@ class TextInput extends Component {
 		return (
 			<fieldset className={ `o-field-options  o-field-options--${classMod}` }>
 				{ title ? <legend className="o-field-options__legend">{ title }</legend> : null }
-				<input
-					className="o-field-options__input"
-					value={ this.state.value }
-					type="text"
-					name={ name }
-					onChange={ this.onChange }
-				/>
-				<button onClick={ this.clear }>X</button>
+				<div className="o-text-field-single">
+					<input
+						className="o-field-options__input o-text-field-single__input"
+						value={ this.state.value }
+						type="text"
+						name={ name }
+						onChange={ this.onChange }
+					/>
+					<button
+					className="o-text-field-single__btn"
+						onClick={ this.clear }
+					>X</button>
+
+				</div>
 
 			</fieldset>
 		);

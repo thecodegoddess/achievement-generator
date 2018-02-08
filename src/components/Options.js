@@ -41,7 +41,7 @@ class Options extends Component {
 									type="radio"
 									name={ name }
 									value={ opt.value }
-								/>{ opt.label }</label>
+								/>{ opt.label.toLowerCase() }</label>
 						);
 					})
 				}

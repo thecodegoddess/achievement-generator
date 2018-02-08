@@ -1,6 +1,6 @@
 {
   "name": "achievements",
-  "version": "0.1.0",
+  "version": "1.0.0-alpha",
   "private": true,
   "homepage": "http://thecodegoddess.com/achieve",
   "dependencies": {

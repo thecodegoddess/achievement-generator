@@ -2,11 +2,25 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CreateOne from './components/CreateOne';
 import BannerDisplay from './components/BannerDisplay';
+import html2canvas from 'html2canvas';
+
 
 // import logo from './logo.svg';
 import './App.css';
 
+window.html2canvas = html2canvas;
+/*
 
+var badge = document.querySelector('.c-badge__content')
+t.then((g) => {
+console.log(g);
+document.body.append(g)
+})
+t.then((g) => {
+console.log(g.toDataURL('));
+
+})
+ */
 
 class App extends Component {
   render() {

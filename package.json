@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://thecodegoddess.com/achieve",
   "dependencies": {
+    "html2canvas": "^1.0.0-alpha.9",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",

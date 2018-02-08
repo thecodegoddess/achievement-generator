@@ -5,7 +5,9 @@ import TextInput from './TextInput';
 
 import withBannerState from '../hoc/withBannerState';
 
-const CreateOne = ({ updateValue, colors, icons, url }) => {
+
+
+const CreateOne = ({ resetUrl, updateValue, colors, icons, getUrl, shortenedUrl, url }) => {
 
 	const iconOptions = Object.keys(icons).map((item) => {
 		return {
@@ -24,15 +26,14 @@ const CreateOne = ({ updateValue, colors, icons, url }) => {
 
 	return (
 		<main>
-			<pre>{ url }</pre>
-			<Link to={ url }>Test Banner</Link>
+			<p>Achievement banner url: { shortenedUrl !== null ? <a href={ shortenedUrl }>{ shortenedUrl }</a> : null }</p>
+
 			<Options
 				name="icons"
 				classMod="icons"
 				title="Select an Icon"
 				radioOptions={ iconOptions }
 				onUpdate={ (val) => {
-					console.log('value of icon is ', val);
 					updateValue({ key : 'icon', value : val});
 				}}
 			/>
@@ -42,7 +43,6 @@ const CreateOne = ({ updateValue, colors, icons, url }) => {
 				classMod="colors"
 				radioOptions={ colorOptions }
 				onUpdate={ (val) => {
-					console.log('value of icon is ', val);
 					updateValue({ key : 'color', value : val});
 				}}
 			/>
@@ -51,10 +51,10 @@ const CreateOne = ({ updateValue, colors, icons, url }) => {
 				classMod="text"
 				name="message"
 				onUpdate={ (val) => {
-					console.log('value of icon is ', val);
 					updateValue({ key : 'message', value : val});
 				}}
 			/>
+			{ url !== null ? <button onClick={ getUrl }>Get Url</button> : null }
 
 		</main>
 	)

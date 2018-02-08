@@ -16,13 +16,19 @@ class TextInput extends Component {
 
 	onChange = ({ target }) => {
 		// debugger;
-		console.log(target, target.value);
 		// return
 		this.setState({
 			value : target.value
 		});
 
 		this.props.onUpdate(target.value);
+	};
+
+	clear = () => {
+		this.setState({
+			value : ''
+		});
+		this.props.onUpdate('');
 	};
 
 	render() {
@@ -42,6 +48,7 @@ class TextInput extends Component {
 					name={ name }
 					onChange={ this.onChange }
 				/>
+				<button onClick={ this.clear }>X</button>
 
 			</fieldset>
 		);

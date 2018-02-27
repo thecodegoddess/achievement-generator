@@ -28,7 +28,6 @@ const withBannerState = (ComponentToWrap) => {
 
 				}).then(response => response.json()).then(jResp => {
 					const { id } = jResp;
-					console.log(jResp)
 
 					if (id) {
 						this.setState({
@@ -69,6 +68,7 @@ const withBannerState = (ComponentToWrap) => {
 					shortenedUrl={ this.state.shortenedUrl }
 					updateValue={ this.updateValue }
 					getUrl={ this.getUrl }
+					selectedOptions={ this.state.options }
 				/>
 			);
 		}

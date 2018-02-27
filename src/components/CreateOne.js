@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Options from './Options'
 import TextInput from './TextInput';
-
+import BannerDisplay from './BannerDisplay';
 import withBannerState from '../hoc/withBannerState';
 
 
 
-const CreateOne = ({ resetUrl, updateValue, colors, icons, getUrl, shortenedUrl, url }) => {
+const CreateOne = ({ resetUrl, updateValue, colors, icons, getUrl, shortenedUrl, url, selectedOptions }) => {
 
 	const iconOptions = Object.keys(icons).map((item) => {
 		return {
@@ -26,8 +25,6 @@ const CreateOne = ({ resetUrl, updateValue, colors, icons, getUrl, shortenedUrl,
 
 	return (
 		<main>
-			<p>Achievement banner url: { shortenedUrl !== null ? <a href={ shortenedUrl }>{ shortenedUrl }</a> : null }</p>
-
 			<Options
 				name="icons"
 				classMod="icons"
@@ -54,9 +51,15 @@ const CreateOne = ({ resetUrl, updateValue, colors, icons, getUrl, shortenedUrl,
 					updateValue({ key : 'message', value : val});
 				}}
 			/>
-			{ url !== null ? <button
-				className="o-btn"
-				onClick={ getUrl }>Get Url</button> : null }
+			{ url !== null ? <div>
+				<button
+					className="o-btn"
+					onClick={ getUrl }>Get Url and Preview</button>
+				<p>Achievement banner url: { shortenedUrl !== null ? <a href={ shortenedUrl }>{ shortenedUrl }</a> : null }</p>
+				<div style={ {maxWidth : '800px', margin : '2px auto'} }>
+					{ shortenedUrl !== null ? <BannerDisplay match={ { params : {...selectedOptions, text : selectedOptions.message } } } /> : null }
+				</div>
+			</div> : null }
 
 		</main>
 	)
